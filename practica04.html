@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica04</title>
+</head>
+<style>
+    img {
+        box-shadow: 5px 10px 10px red;
+    }
+    figure {
+        text-align: center;
+        display: inline-block;
+        width: 300px;
+
+    }
+</style>
+<body>
+    <!-- img sirve para colocar imagenes, figure es de caracter bloke por lo que al ingresar elementos 
+        ingresados elementos estaran como una pila, figcaption nos permite ingresar texto en figure -->
+    <h1>Ramdom Picture</h1>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, delectus consequuntur necessitatibus, placeat ex cumque cum natus vel,
+        ratione vitae debitis eligendi consectetur quasi officia sed tempore aliquam quaerat totam.
+    </p>
+    <!-- http://picsum.photos/id/1/200/200 -->
+    <div id="app"></div>
+    <!-- <figure>
+        <figcaption><img src="http://picsum.photos/id/1/200/200"alt=""></figcaption>jon
+    </figure>
+    <figure>
+        <figcaption><img src="http://picsum.photos/id/1/200/200"alt=""></figcaption>
+        <figcaption>jane</figcaption>
+    </figure> -->
+    <script>
+        const app = document.getElementById("app")
+        const url = "https://picsum.photos/id/"
+        const size = "/200/200"
+        const Picture = (parametro) => {
+            const src = url+parametro.id+size
+            return `
+                <figure>
+                    <img src="${src}" alt="">
+                    <figcaption>${parametro.nombre}</figcaption>
+                </figure>
+            `
+            }
+        app.innerHTML = Picture({id:1, nombre:"John"})
+        app.innerHTML += Picture({id:"2", nombre:"Jane"})
+        app.innerHTML += Picture({id:"3", nombre:"Joane"})
+    
+    </script>
+</body>
+</html>
