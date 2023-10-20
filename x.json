@@ -1,0 +1,19 @@
+function x(param){
+    y("x");
+    console.log( "x" +param )
+    return "fin x"
+}
+
+function xx(param){
+    return "fin xx"
+}
+
+function y(param){
+    console.log( "y: "+param)
+    return "fin y"
+}
+
+function z(param){
+    console.log( "z: "+param)
+    return "fin z"
+}

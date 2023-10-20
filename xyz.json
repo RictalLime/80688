@@ -1,0 +1,5 @@
+document.getElementById("app")
+consola.log(x("xyz"))
+consola.log(xx("xyz"))
+consola.log(y("xyz"))
+consola.log(z("xyz"))
